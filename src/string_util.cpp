@@ -31,7 +31,7 @@
  *  @{
  */
 
-#include "../include/string_util.hpp"
+#include "string_util.hpp"
 
 #include <algorithm>
 

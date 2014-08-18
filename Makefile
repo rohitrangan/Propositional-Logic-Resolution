@@ -5,7 +5,7 @@
 
 CXX=c++
 CXXFLAGS= -Wall -Wextra
-CXXSRCS=src/main.cpp src/parse_input.cpp src/string_util.cpp
+CXXSRCS=src/main.cpp src/parse_input.cpp src/string_util.cpp src/logic.cpp
 CXXOBJS=$(CXXSRCS:.cpp=.o)
 LIBS=
 INCLUDES=-I./include

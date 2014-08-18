@@ -1,1 +1,1 @@
-string_util.o: src/string_util.cpp src/../include/string_util.hpp
+logic.o: src/logic.cpp include/logic.hpp

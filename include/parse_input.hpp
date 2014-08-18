@@ -17,9 +17,11 @@ using namespace std;
 namespace parse
 {
 
-int parse_line (string line, set <string> &t);
+int parse_inpfile_line (string line, set <string> &t);
 
-void create_set (string f_name, set <set <string> > &s);
+void create_main_set (string f_name, set <set <string> > &s);
+
+int parse_inp_line (string line, set <string> &t);
 
 }
 
