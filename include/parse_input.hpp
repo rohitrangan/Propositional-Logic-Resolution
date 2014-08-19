@@ -10,8 +10,6 @@
 #include <fstream>
 #include <iostream>
 
-#define MAX_LINE_LENGTH 256
-
 using namespace std;
 
 namespace parse

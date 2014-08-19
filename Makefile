@@ -9,7 +9,7 @@ CXXSRCS=src/main.cpp src/parse_input.cpp src/string_util.cpp src/logic.cpp
 CXXOBJS=$(CXXSRCS:.cpp=.o)
 LIBS=
 INCLUDES=-I./include
-TARGET=main
+TARGET=resolution
 #DEBUGFLAGS=-g -ggdb -O0 -fno-inline
 
 # Required for the target clean.

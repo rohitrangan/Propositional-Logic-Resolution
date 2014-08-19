@@ -1,1 +1,2 @@
-logic.o: src/logic.cpp include/logic.hpp
+logic.o: src/logic.cpp include/logic.hpp include/common.hpp \
+  include/parse_input.hpp

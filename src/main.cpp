@@ -5,12 +5,18 @@
 #include "common.hpp"
 #include "parse_input.hpp"
 
-int main ()
+int main (int argc, char* argv[])
 {
-    set <set <string> > s;
-    parse::create_main_set ("data.txt", s);
+    if (argc < 2)
+    {
+        cout << "Usage - ./resolution filename\n\n";
+        return 1;
+    }
+    set <set <string> > clauses;
+    parse::create_main_set (argv[1], clauses);
 
-#if DEBUG == 1
+#if MAIN_DEBUG == 1
+    cout << "\n\nMAIN_DEBUG\n\n";
     set <string> t1, t2;
     parse::parse_inp_line ("t.", t1);
     logic::de_morgan_and2or (t1, t2);
@@ -31,7 +37,21 @@ int main ()
         }
         cout << "\n\n";
     }
+    cout << "\n\nMAIN_DEBUG END\n\n";
 #endif
+
+    while (true)
+    {
+        cout << "? ";
+        string inp;
+        getline (cin, inp);
+        logic::Resolution r1 (clauses, inp);
+        bool tmp = r1.start ();
+        if (tmp)
+            cout << "Yes.\n";
+        else
+            cout << "No.\n";
+    }
 
     return 0;
 }
